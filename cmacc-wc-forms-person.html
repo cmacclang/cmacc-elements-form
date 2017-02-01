@@ -1,0 +1,33 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<link rel="import" href="../paper-input/paper-input.html">
+
+<!--
+`cmacc-wc-forms`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cmacc-wc-forms-person">
+  <template>
+    <paper-input label="FirstName" value="{{data.firstName}}" ></paper-input>
+    <paper-input label="FirstLast" value="{{data.firstName}}"></paper-input>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cmacc-wc-forms-person',
+
+      properties: {
+        data: {
+          type: Object,
+          value: {},
+          notify: true
+        }
+      }
+
+    });
+  </script>
+</dom-module>
