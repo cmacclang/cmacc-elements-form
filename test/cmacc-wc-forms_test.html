@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>cmacc-wc-forms test</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../cmacc-wc-forms.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <cmacc-wc-forms></cmacc-wc-forms>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('cmacc-wc-forms', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'cmacc-wc-forms');
+        });
+      });
+    </script>
+  </body>
+</html>
