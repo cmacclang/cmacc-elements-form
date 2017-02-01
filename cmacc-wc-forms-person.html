@@ -10,24 +10,31 @@
 -->
 
 <dom-module id="cmacc-wc-forms-person">
-  <template>
-    <paper-input label="FirstName" value="{{data.firstName}}" ></paper-input>
-    <paper-input label="FirstLast" value="{{data.firstName}}"></paper-input>
-  </template>
+    <template>
+        <paper-input label="First name" value="{{data.firstName}}"></paper-input>
+        <paper-input label="Last name" value="{{data.lastName}}"></paper-input>
+    </template>
 
-  <script>
-    Polymer({
+    <script>
+        Polymer({
 
-      is: 'cmacc-wc-forms-person',
+            is: 'cmacc-wc-forms-person',
 
-      properties: {
-        data: {
-          type: Object,
-          value: {},
-          notify: true
-        }
-      }
+            properties: {
+                data: {
+                    type: Object,
+                    value: {},
+                    notify: true
+                }
+            },
 
-    });
-  </script>
+            attached: function () {
+                this.set('data', {
+                    firstName: "",
+                    lastName: ""
+                })
+            }
+
+        });
+    </script>
 </dom-module>
