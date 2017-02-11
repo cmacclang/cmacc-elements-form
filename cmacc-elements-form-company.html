@@ -1,0 +1,43 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-input/paper-input.html">
+
+<!--
+`cmacc-elements-form-company`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cmacc-wc-forms-person">
+    <template>
+        <paper-input label="Company Name" value="{{data.companyName}}"></paper-input>
+        <paper-input label="Business Address" value="{{data.businessAddress}}"></paper-input>
+        <paper-input label="Legal Address" value="{{data.legalAddress}}"></paper-input>
+        <paper-input label="Registration Number" value="{{data.registrationNumber}}"></paper-input>
+    </template>
+
+    <script>
+        Polymer({
+
+            is: 'cmacc-wc-forms-person',
+
+            properties: {
+                data: {
+                    type: Object,
+                    value: {},
+                    notify: true
+                }
+            },
+
+            attached: function () {
+                this.set('data', {
+                    companyName: "",
+                    businessAddress: "",
+                    legalAddress: "",
+                    registrationNumber: ""
+                });
+            }
+
+        });
+    </script>
+</dom-module>
